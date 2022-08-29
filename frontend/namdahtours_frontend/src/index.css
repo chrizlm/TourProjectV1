@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Bangers';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../src/fonts/Bangers/Bangers-Regular.ttf');
+  src: local(''),
+  url('../src/fonts/Bangers/Bangers-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rosario';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../src/fonts/Rosario/Rosario-VariableFont_wght.ttf');
+  src: local(''),
+  url('../src/fonts/Rosario/Rosario-Italic-VariableFont_wght.ttf') format('truetype'),
+  url('../src/fonts/Rosario/Rosario-VariableFont_wght.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Fredericka the Great';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../src/fonts/Fredericka_the_Great/FrederickatheGreat-Regular.ttf');
+  src: local(''),
+  url('../src/fonts/Fredericka_the_Great/FrederickatheGreat-Regular.ttf') format('truetype');
+}

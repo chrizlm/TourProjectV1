@@ -71,11 +71,11 @@ function Home() {
                             <div style={styles.textsection}>
                                 <ThemeProvider theme={theme}>
                                     <CssBaseline />
-                                        <Typography gutterBottom variant="h5" component="div" style={{fontFamily: "Helvetica Neue"}} >
+                                        <Typography gutterBottom variant="h5" component="div" style={{fontFamily: "Fredericka the Great", fontSize:35}} >
                                             Namdah Tours safaris
                                         </Typography>
                                 </ThemeProvider>
-                            <Typography variant="body2" color="text.secondary" style={{fontFamily: "Arial"}}>
+                            <Typography variant="body2" color="text.secondary" style={{fontFamily: "Rosario", fontSize:18}}>
                                 Tour wonderful places with your friends and family
                                 get to enjoy and have fun
                                 Tour wonderful places with your friends and family
@@ -119,10 +119,10 @@ function Home() {
                         </Grid>
                         <Grid lg={6}>
                             <div style={styles.textsection}>
-                            <Typography gutterBottom variant="h5" component="div">
+                            <Typography gutterBottom variant="h5" component="div" style={{fontFamily: "Bangers", fontSize:20}}>
                                 Want to make memories with those you cheriesh
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography variant="body2" color="text.secondary" style={{fontFamily: "Rosario", fontSize:18}}>
                                 Tour wonderful places with your friends and family
                                 get to enjoy and have fun
                                 Tour wonderful places with your friends and family

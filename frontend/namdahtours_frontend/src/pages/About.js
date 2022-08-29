@@ -42,10 +42,10 @@ function About() {
                     <Grid container spacing={2}>
                         <Grid xs={12} style={{height:300}}>
                             <div style={styles.textsection}>
-                                <Typography gutterBottom variant="h5" component="div">
+                                <Typography gutterBottom variant="h5" component="div" style={{fontFamily: "Fredericka the Great", fontSize:35}}>
                                     Namdah Tours safaris
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary">
+                                <Typography variant="body2" color="text.secondary" style={{fontFamily: "Rosario", fontSize:18}}>
                                     Tour wonderful places with your friends and family
                                     get to enjoy and have fun
                                     Tour wonderful places with your friends and family
