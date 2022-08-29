@@ -122,7 +122,9 @@ export default function CarouselComponent() {
                                 Date: 14th september 2022
                             </Typography>
                             <br/>
-                            <DecoretedList/>
+                            <div >
+                                <DecoretedList/>
+                            </div>
                         </Typography>
                     </Paper>
                 </div>
@@ -164,13 +166,20 @@ export default function CarouselComponent() {
 
 
 let DecoretedList = function () {
+    const styles = {
+        listelements : {
+            display:"flex",
+            flexWrap: "wrap",
+            gap: "5px"
+        }
+    }
     return(
         <>
             <ThemeProvider theme={theme}>
                 <div>
                     <span style={{float:"left", paddingRight: "5px"}}>Activities: </span>
                 </div>
-                <Stack direction="row" spacing={1}>
+                <Stack direction="row" spacing={1} style={styles.listelements}>
                     <Chip label="Swimming" color="neutral" variant="outlined" />
                     <Chip label="Team building" color="neutral" variant="outlined" />
                     <Chip label="Fun" color="neutral" variant="outlined" />
@@ -180,7 +189,7 @@ let DecoretedList = function () {
                 <div>
                     <span style={{float: "left", paddingRight:"5px"}}>Inclusive: </span>
                 </div>
-                <Stack direction="row" spacing={1}>
+                <Stack direction="row" spacing={1} style={styles.listelements}>
                     <Chip label="Drinks" color="success" variant="outlined" />
                     <Chip label="Transport" color="success" variant="outlined" />
                     <Chip label="Lunch" color="success" variant="outlined" />
@@ -188,7 +197,7 @@ let DecoretedList = function () {
                 </Stack>
                 <br/>
                 <span style={{float:"left", paddingRight: "5px"}}>Exclusive: </span>
-                <Stack direction="row" spacing={1} >
+                <Stack direction="row" spacing={1} style={styles.listelements}>
                     <Chip label="Entry fee" color="exclusive" variant="outlined" />
                     <Chip label="Accomodation" color="exclusive" variant="outlined" />
                     <Chip label="Snacks" color="exclusive" variant="outlined" />
