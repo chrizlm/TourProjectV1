@@ -42,7 +42,7 @@ function About() {
                     <Grid container spacing={2}>
                         <Grid xs={12} style={{height:300}}>
                             <div style={styles.textsection}>
-                                <Typography gutterBottom variant="h5" component="div" style={{fontFamily: "Fredericka the Great", fontSize:35}}>
+                                <Typography gutterBottom variant="h5" component="div" style={{fontFamily: "Fredericka the Great"}}>
                                     Namdah Tours safaris
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary" style={{fontFamily: "Rosario", fontSize:18}}>
