@@ -7,9 +7,21 @@ import Typography from "@mui/material/Typography";
 import CardContent from "@mui/material/CardContent";
 import Box from "@mui/material/Box";
 import {styled} from "@mui/system";
-import CardMedia from "@mui/material/CardMedia";
 import Card from "@mui/material/Card";
 import axios from "axios";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
+
+const theme = createTheme({
+
+    palette: {
+        neutral: {
+            main: '#64748B',
+            contrastText: '#fff',
+        },
+    },
+});
 
 
 const MyCardComponent = styled('div')({
@@ -19,16 +31,21 @@ const MyCardComponent = styled('div')({
     //borderRadius: 4,
     maxWidth: true,
     backgroundImage:
-        "url('https://res.cloudinary.com/chrislm/image/upload/v1661403840/Namdah%20Tours/wild3.jpg')",
+        "url('https://res.cloudinary.com/chrislm/image/upload/v1661496960/Namdah%20Tours/random.jpg')",
     height:'auto',
     //marginTop:'-70px',
     fontSize:'50px',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-
 });
 
 function RegistrationForm() {
+    const styles = {
+        formsection:{
+            backgroundColor: 'aliceblue',
+        },
+    }
+
     const {register, handleSubmit, formState: {errors}, control} = useForm( { mode: "onBlur"} );
     const handleRegistration = (data) => {console.log(data);
         axios.post("https://namdah-tours-client.herokuapp.com/save", data)
@@ -70,7 +87,7 @@ function RegistrationForm() {
 
     return(
         <MyCardComponent>
-            <Card sx={{ maxWidth: true , margin: 10, alignContent: 'center', borderRadius: 0}} elevation={12}>
+            <Card sx={{ maxWidth: true , margin: 10, alignContent: 'center', borderRadius: 4}} elevation={12} style={styles.formsection}>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div" style={{textAlign: "center"}}>
                         Register with us
@@ -83,7 +100,7 @@ function RegistrationForm() {
                         noValidate
                         autoComplete="off"
                     >
-                        <form onSubmit={handleSubmit(handleRegistration, handleError)}>
+                        <form onSubmit={handleSubmit(handleRegistration, handleError)} >
                             <Grid container spacing={2} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                                 <Grid item xs={12} md={6}>
                                     <div>
@@ -127,7 +144,7 @@ function RegistrationForm() {
                                             defaultValue=""
                                             rules={registerOptions.email}
                                             render={({field}) => (
-                                                <TextField {...register('email')} label="email" type="email"/>
+                                                <TextField {...register('email')} label="Email" type="email"/>
                                             )}
                                         />
                                         {errors?.email && errors.email.message
@@ -144,7 +161,7 @@ function RegistrationForm() {
                                             defaultValue=""
                                             rules={registerOptions.id_number}
                                             render={({field}) => (
-                                                <TextField {...register('id_number')} label="id_number" />
+                                                <TextField {...register('id_number')} label="ID Number" />
                                             )}
                                         />
                                         {errors?.id_number && errors.id_number.message
@@ -161,7 +178,7 @@ function RegistrationForm() {
                                             defaultValue=""
                                             rules={registerOptions.phone_number}
                                             render={({field}) => (
-                                                <TextField {...register('phone_number')} label="phone_number" />
+                                                <TextField {...register('phone_number')} label="Phone_number" />
                                             )}
                                         />
                                         {errors?.phone_number && errors.phone_number.message
@@ -171,7 +188,12 @@ function RegistrationForm() {
                                     </div>
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <Button variant="outlined" onClick={handleSubmit(handleRegistration, handleError)}>SUBMIT</Button>
+                                    <ThemeProvider theme={theme}>
+                                    <Button
+                                        variant="contained"
+                                        onClick={handleSubmit(handleRegistration, handleError)}
+                                        color="neutral">SUBMIT</Button>
+                                    </ThemeProvider>
                                     <Snackbar open={open} autoHideDuration={6000} onClose={handleClose} anchorOrigin={{ vertical: "top", horizontal: "center" }}>
                                         <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
                                             Details sent successfully !

@@ -1,10 +1,9 @@
 import React from 'react'
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import CardMedia from "@mui/material/CardMedia";
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 import RegistrationForm from "../components/RegistrationForm";
+import CarouselComponent from "../components/CarouselComponent";
 
 
 function Booking() {
@@ -41,8 +40,8 @@ function Booking() {
                     width: "auto",
                     height: "auto",
                 }}>
-                    <Grid container spacing={2}>
-                        <Grid xs={6}>
+                    <Grid container spacing={0}>
+                        <Grid xs={12} lg={6} md={6} sm={6}>
                             <div style={styles.textsection}>
                                 <Typography gutterBottom variant="h5" component="div">
                                     Namdah Tours safaris
@@ -52,24 +51,12 @@ function Booking() {
                                     get to enjoy and have fun
                                     Tour wonderful places with your friends and family
                                     get to enjoy and have fun
-                                    Tour wonderful places with your friends and family
-                                    get to enjoy and have fun
-                                    Tour wonderful places with your friends and family
-                                    get to enjoy and have fun
-                                    Tour wonderful places with your friends and family
-                                    get to enjoy and have fun
+
                                 </Typography>
                             </div>
                         </Grid>
-                        <Grid xs={6}>
-                            <Paper elevation={3}>
-                                <CardMedia
-                                    component="img"
-                                    image= "https://res.cloudinary.com/chrislm/image/upload/v1661403838/Namdah%20Tours/package1.jpg"
-                                    alt="happy clients"
-
-                                />
-                            </Paper>
+                        <Grid lg={6} md={6} sm={6}>
+                            <CarouselComponent />
                         </Grid>
                         <Grid xs={12}>
                             <RegistrationForm />
@@ -82,3 +69,14 @@ function Booking() {
 }
 
 export default Booking
+
+/*
+<Paper elevation={3}>
+                                <CardMedia
+                                    component="img"
+                                    image= "https://res.cloudinary.com/chrislm/image/upload/v1661403838/Namdah%20Tours/package1.jpg"
+                                    alt="happy clients"
+                                    style={{height: "auto"}}
+                                />
+                            </Paper>
+ */

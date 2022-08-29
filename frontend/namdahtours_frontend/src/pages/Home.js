@@ -1,7 +1,6 @@
 import {Link} from "react-router-dom";
 import * as React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
-import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import CardMedia from "@mui/material/CardMedia";
@@ -9,8 +8,28 @@ import Typography from '@mui/material/Typography';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Button from '@mui/material/Button';
+import { grey } from '@mui/material/colors';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 
+const theme = createTheme({
+    palette: {
+        neutral: {
+            main: '#64748B',
+            contrastText: '#fff',
+        },
+    },
 
+    typography: {
+        fontFamily: [
+            "Nunito",
+            "Roboto",
+            "Helvetica Neue",
+            "Arial",
+            "sans-serif"
+        ].join(",")
+    },
+});
 
 
 
@@ -47,13 +66,16 @@ function Home() {
                     width: "auto",
                     height: "auto",
                     }}>
-                    <Grid container spacing={2}>
-                        <Grid xs={6}>
+                    <Grid container spacing={0}>
+                        <Grid lg={6} xs={6}>
                             <div style={styles.textsection}>
-                            <Typography gutterBottom variant="h5" component="div">
-                                Namdah Tours safaris
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
+                                <ThemeProvider theme={theme}>
+                                    <CssBaseline />
+                                        <Typography gutterBottom variant="h5" component="div" style={{fontFamily: "Helvetica Neue"}} >
+                                            Namdah Tours safaris
+                                        </Typography>
+                                </ThemeProvider>
+                            <Typography variant="body2" color="text.secondary" style={{fontFamily: "Arial"}}>
                                 Tour wonderful places with your friends and family
                                 get to enjoy and have fun
                                 Tour wonderful places with your friends and family
@@ -67,19 +89,19 @@ function Home() {
                             </Typography>
                             </div>
                         </Grid>
-                        <Grid xs={6}>
+                        <Grid lg={6} xs={6}>
                             <Paper elevation={3}>
                                 <CardMedia
                                     component="img"
                                     image= "https://res.cloudinary.com/chrislm/image/upload/v1661403857/Namdah%20Tours/fun2.jpg"
-                                alt="happy clients"
-
+                                    alt="happy clients"
+                                    style={{height:"450px"}}
                                 />
                             </Paper>
                         </Grid>
-                        <Grid xs={6}>
+                        <Grid lg={6}>
                             <ImageList
-                                sx={{ width: "auto", height: 450 }}
+                                sx={{ width: "auto", height: "auto" }}
                                 variant="quilted"
                                 cols={4}
                                 rowHeight={121}
@@ -95,7 +117,7 @@ function Home() {
                                 ))}
                             </ImageList>
                         </Grid>
-                        <Grid xs={6}>
+                        <Grid lg={6}>
                             <div style={styles.textsection}>
                             <Typography gutterBottom variant="h5" component="div">
                                 Want to make memories with those you cheriesh
@@ -116,7 +138,11 @@ function Home() {
                                 Expore the wonderful parkages with us
                             </Typography>
                             <div>
-                                <Link to="booking" style={{textDecoration: "none"}}><Button variant="outlined">MORE</Button></Link>
+                                <ThemeProvider theme={theme}>
+                                <Link to="booking" style={{textDecoration: "none"}}>
+                                    <Button variant="contained" color="neutral">MORE</Button>
+                                </Link>
+                                </ThemeProvider>
                             </div>
                             </div>
                         </Grid>
@@ -204,5 +230,26 @@ const itemData = [
         img: 'https://res.cloudinary.com/chrislm/image/upload/v1661403857/Namdah%20Tours/fun2.jpg',
         title: 'Bike',
         cols: 2,
+    },
+
+
+
+
+
+
+
+    typography: {
+        fontFamily: [
+            '-apple-system',
+            'BlinkMacSystemFont',
+            '"Segoe UI"',
+            'Roboto',
+            '"Helvetica Neue"',
+            'Arial',
+            'sans-serif',
+            '"Apple Color Emoji"',
+            '"Segoe UI Emoji"',
+            '"Segoe UI Symbol"',
+        ].join(','),
     },
  */

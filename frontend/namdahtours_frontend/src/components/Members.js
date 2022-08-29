@@ -1,13 +1,8 @@
 import React from 'react'
 import Grid from '@mui/material/Unstable_Grid2';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import CardMedia from "@mui/material/CardMedia";
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -28,7 +23,7 @@ function Members() {
     return(
         <>
             <Grid container spacing={3}>
-                <Grid xs={4}>
+                <Grid lg={4} md={4} sm={4} xs={12}>
                     <Card elevation={10}>
                         <div style={{height: 140}} >
                         <Avatar
@@ -74,7 +69,7 @@ function Members() {
 
                     </Card>
                 </Grid>
-                <Grid xs={4}>
+                <Grid lg={4} md={4} sm={4} xs={12}>
                 <Card elevation={10}>
                     <div style={{height: 140}} >
                         <Avatar
@@ -120,7 +115,7 @@ function Members() {
 
                 </Card>
             </Grid>
-                <Grid xs={4}>
+                <Grid lg={4} md={4} sm={4} xs={12}>
                     <Card elevation={10}>
                         <div style={{height: 140}} >
                             <Avatar

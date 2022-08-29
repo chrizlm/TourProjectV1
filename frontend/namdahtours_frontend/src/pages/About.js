@@ -1,8 +1,6 @@
 import React from 'react'
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import CardMedia from "@mui/material/CardMedia";
 import Typography from '@mui/material/Typography';
 import Members from "../components/Members";
 
@@ -23,6 +21,7 @@ function About() {
             left: "50%",
             transform: "translate(-50%, -50%)"
         },
+
         tobeused : {
             backgroundColor: 'primary.dark',
             '&:hover': {
