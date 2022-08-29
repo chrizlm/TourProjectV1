@@ -84,7 +84,7 @@ export default function CarouselComponent() {
         <Box sx={{ width: '100%' }}>
 
             <TabPanel value={value} index={0} >
-                <div style={{height:"450px"}}>
+                <div style={{maxheight:"600px"}}>
                 <Paper elevation={3} >
                     <CardMedia
                         component="img"
@@ -106,7 +106,7 @@ export default function CarouselComponent() {
                 </div>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <div style={{height:"450px"}}>
+                <div style={{maxheight:"600px"}}>
                     <Paper elevation={3} >
                         <CardMedia
                             component="img"
@@ -130,7 +130,7 @@ export default function CarouselComponent() {
                 </div>
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <div style={{height:"450px"}}>
+                <div style={{maxheight:"600px"}}>
                     <Paper elevation={3} >
                         <CardMedia
                             component="img"
