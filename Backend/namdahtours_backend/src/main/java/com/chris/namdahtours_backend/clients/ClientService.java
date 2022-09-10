@@ -28,7 +28,7 @@ public class ClientService {
             log.error("email already exists");
             return "email already exists";
         }
-        if(clientRepository.existsById(client.getId())){
+        if(clientRepository.existsById_number(client.getId_number())){
             log.error("Id number already exists");
             return "id already exists";
         }

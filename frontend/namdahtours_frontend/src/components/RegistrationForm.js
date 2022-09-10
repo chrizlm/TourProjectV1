@@ -48,7 +48,7 @@ function RegistrationForm() {
 
     const {register, handleSubmit, formState: {errors}, control} = useForm( { mode: "onBlur"} );
     const handleRegistration = (data) => {console.log(data);
-        axios.post("https://dirhere/client/save", data)
+        axios.post("https://namdah-tours-backend.herokuapp.com/client/save", data)
             .then(response => {
                 console.log(response)
             })

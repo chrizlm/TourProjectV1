@@ -20,6 +20,6 @@ public class Client {
     private String first_name;
     private String last_name;
     private String email;
-    private int id;
+    private int id_number;
     private int phone_number;
 }
