@@ -101,7 +101,7 @@ function Members() {
                                     <AlternateEmailIcon/>:email
                                 </Grid>
                                 <Grid sx={6}>
-                                    <InstagramIcon/>:instagram
+                                    <InstagramIcon/>:<a href="https://instagram.com/namdahtours?igshid=YmMyMTA2M2Y=">instagram</a>
                                 </Grid>
                                 <Grid sx={6}>
                                     <FacebookIcon/>:facebook

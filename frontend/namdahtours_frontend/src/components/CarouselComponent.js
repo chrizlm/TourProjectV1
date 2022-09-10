@@ -123,7 +123,7 @@ export default function CarouselComponent() {
                             </Typography>
                             <br/>
                             <div >
-                                <DecoretedList/>
+                                <DecoretedList2/>
                             </div>
                         </Typography>
                     </Paper>
@@ -146,7 +146,7 @@ export default function CarouselComponent() {
                                 Date: 29th september 2022
                             </Typography>
                             <br/>
-                            <DecoretedList/>
+                            <DecoretedList3/>
                         </Typography>
                     </Paper>
                 </div>
@@ -201,6 +201,86 @@ let DecoretedList = function () {
                     <Chip label="Entry fee" color="exclusive" variant="outlined" />
                     <Chip label="Accomodation" color="exclusive" variant="outlined" />
                     <Chip label="Snacks" color="exclusive" variant="outlined" />
+                </Stack>
+            </ThemeProvider>
+        </>
+    )
+}
+
+let DecoretedList2 = function () {
+    const styles = {
+        listelements : {
+            display:"flex",
+            flexWrap: "wrap",
+            gap: "5px"
+        }
+    }
+    return(
+        <>
+            <ThemeProvider theme={theme}>
+                <div>
+                    <span style={{float:"left", paddingRight: "5px"}}>Activities: </span>
+                </div>
+                <Stack direction="row" spacing={1} style={styles.listelements}>
+                    <Chip label="Swimming" color="neutral" variant="outlined" />
+                    <Chip label="Canopy walk" color="neutral" variant="outlined" />
+                    <Chip label="Birthday bash" color="neutral" variant="outlined" />
+                </Stack>
+                <br/>
+                <div>
+                    <span style={{float: "left", paddingRight:"5px"}}>Inclusive: </span>
+                </div>
+                <Stack direction="row" spacing={1} style={styles.listelements}>
+                    <Chip label="Meals" color="success" variant="outlined" />
+                    <Chip label="Entry fees" color="success" variant="outlined" />
+                    <Chip label="Tour guide" color="success" variant="outlined" />
+                    <Chip label="Photography" color="success" variant="outlined" />
+                </Stack>
+                <br/>
+                <span style={{float:"left", paddingRight: "5px"}}>Exclusive: </span>
+                <Stack direction="row" spacing={1} style={styles.listelements}>
+                    <Chip label="Photography" color="exclusive" variant="outlined" />
+                    <Chip label="Accomodation" color="exclusive" variant="outlined" />
+                    <Chip label="Drinks" color="exclusive" variant="outlined" />
+                </Stack>
+            </ThemeProvider>
+        </>
+    )
+}
+
+
+
+let DecoretedList3 = function () {
+    const styles = {
+        listelements : {
+            display:"flex",
+            flexWrap: "wrap",
+            gap: "5px"
+        }
+    }
+    return(
+        <>
+            <ThemeProvider theme={theme}>
+                <div>
+                    <span style={{float:"left", paddingRight: "5px"}}>Activities: </span>
+                </div>
+                <Stack direction="row" spacing={1} style={styles.listelements}>
+                    <Chip label="Nature trail" color="neutral" variant="outlined" />
+                    <Chip label="Games" color="neutral" variant="outlined" />
+                </Stack>
+                <br/>
+                <div>
+                    <span style={{float: "left", paddingRight:"5px"}}>Inclusive: </span>
+                </div>
+                <Stack direction="row" spacing={1} style={styles.listelements}>
+                    <Chip label="Drinks" color="success" variant="outlined" />
+                    <Chip label="Snacks" color="success" variant="outlined" />
+                </Stack>
+                <br/>
+                <span style={{float:"left", paddingRight: "5px"}}>Exclusive: </span>
+                <Stack direction="row" spacing={1} style={styles.listelements}>
+                    <Chip label="Transport" color="exclusive" variant="outlined" />
+                    <Chip label="Accomodation" color="exclusive" variant="outlined" />
                 </Stack>
             </ThemeProvider>
         </>
